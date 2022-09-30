@@ -1,40 +1,18 @@
-import { Fragment } from "react";
-import Head from "next/head";
+import { Fragment, useEffect, useState } from "react";
 import { getDatabase, getPage, getBlocks } from "../lib/notion";
 import Link from "next/link";
 import { databaseId } from "./index.js";
 import styles from "./post.module.css";
+import Prism from "prismjs"
+import Seo from "../components/Seo";
+import { useRouter } from "next/router";
+import { Text } from "../components/Text";
 
-export const Text = ({ text }) => {
-  if (!text) {
-    return null;
-  }
-  return text.map((value) => {
-    const {
-      annotations: { bold, code, color, italic, strikethrough, underline },
-      text,
-    } = value;
-    return (
-      <span
-        className={[
-          bold ? styles.bold : "",
-          code ? styles.code : "",
-          italic ? styles.italic : "",
-          strikethrough ? styles.strikethrough : "",
-          underline ? styles.underline : "",
-        ].join(" ")}
-        style={color !== "default" ? { color } : {}}
-      >
-        {text.link ? <a href={text.link.url}>{text.content}</a> : text.content}
-      </span>
-    );
-  });
-};
 
 const renderBlock = (block) => {
   const { type, id } = block;
   const value = block[type];
-
+  
   switch (type) {
     case "paragraph":
       return (
@@ -44,28 +22,44 @@ const renderBlock = (block) => {
       );
     case "heading_1":
       return (
-        <h1>
+        <h1 className={styles.h1b}>
           <Text text={value.text} />
         </h1>
       );
     case "heading_2":
       return (
-        <h2>
+        <h2 className={styles.h2b}>
           <Text text={value.text} />
         </h2>
       );
     case "heading_3":
       return (
-        <h3>
+        <h3 className={styles.h3b}>
           <Text text={value.text} />
         </h3>
       );
     case "bulleted_list_item":
+
+      return (
+        <ul>
+          <li>
+            <Text text={value.text} />
+          </li>
+          {value.children?.map((block) => (
+            <Fragment key={block.id}>{renderBlock(block)}</Fragment>
+          ))}
+        </ul>
+      );
     case "numbered_list_item":
       return (
-        <li>
-          <Text text={value.text} />
-        </li>
+        <ul>
+          <li>
+            <Text text={value.text} />
+          </li>
+          {value.children?.map((block) => (
+            <Fragment key={block.id}>{renderBlock(block)}</Fragment>
+          ))}
+        </ul>
       );
     case "to_do":
       return (
@@ -104,11 +98,11 @@ const renderBlock = (block) => {
     case "quote":
       return <blockquote key={id}>{value.text[0].plain_text}</blockquote>;
     case "code":
+      
+      const language = block.code.language.toLowerCase()
       return (
         <pre className={styles.pre}>
-          <code className={styles.code_block} key={id}>
-            {value.text[0].plain_text}
-          </code>
+          <code className={`language-${language}`} key={id} >{value.text[0].plain_text}</code>
         </pre>
       );
     case "file":
@@ -135,16 +129,28 @@ const renderBlock = (block) => {
   }
 };
 
+const metaDescription = (blocks) => {
+  return(blocks.filter((block)=>{ return block.type ==="paragraph"})[0].paragraph.text.map((text)=>{return text.plain_text}).join(""))
+}
+
 export default function Post({ page, blocks }) {
+  const [metaDes , setMetaDes] = useState("");
+  const router = useRouter();
+  const asPath = router.asPath
+   useEffect(()=>{Prism.highlightAll();
+                  if(blocks){
+                  setMetaDes(metaDescription(blocks))}},[]) 
   if (!page || !blocks) {
     return <div />;
   }
   return (
     <div>
-      <Head>
-        <title>{page.properties.Name.title[0].plain_text}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Seo
+        pageTitle={page.properties.Name.title[0].plain_text}
+        pageDescription={metaDes?metaDes:page.properties.Name.title[0].plain_text}
+        pagePath={`https://tech-blog-efcg.vercel.app/${asPath}`}
+        pageImg="/24510976_l.jpg"
+      />
 
       <article className={styles.container}>
         <h1 className={styles.name}>
