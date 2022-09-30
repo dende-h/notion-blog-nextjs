@@ -1,10 +1,11 @@
-import Head from "next/head";
+
 import Link from "next/link";
 import { getDatabase } from "../lib/notion";
 import { Text } from "./[id].js";
 import styles from "./index.module.css";
 import Menu from "../components/menu";
 import { useState } from "react";
+import Seo from "../components/Seo";
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
@@ -27,10 +28,7 @@ export default function Home({ posts }) {
   const setSelectOption = [...set];
   return (
     <>
-      <Head>
-        <title>dende's novel site</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+       <Seo/>
 
       <main className={styles.container}>
         <header className={styles.header}>
