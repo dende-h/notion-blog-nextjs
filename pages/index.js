@@ -36,15 +36,14 @@ export default function Home({ posts }) {
       <main className={styles.container}>
         <header className={styles.header}>
           <Menu />
-          <h1>On And On And On N and I</h1>
+          <h1>On and on N and I</h1>
           <p>
           のんびり趣味で綴っているノベル＆イラスト公開サイトです。山梨県でSEをしながらのんびり不定期で更新中。ノベルは短編中心で書いています。<br/>
           小説書いている方やイラストを公開している方との交流などを増やしていければと思っております。<br/>
-          コメント機能などは実装されていませんので、交流はTwitterでお願いします。
-          <p>
-            コメント感想などはコチラ→
-            <a href="https://twitter.com/dendeiriamaka1">dende趣味Twitter</a>
-          </p>
+          コメント機能などは実装されていませんので、交流はTwitterでお願いします。<br/>
+          twitter→
+            <a href="https://twitter.com/dendeiriamaka1">dende趣味Twitter</a><br/>
+
           このサイトの作成はこちらの
             <a href="https://github.com/samuelkraft/notion-blog-nextjs">
               notion-blog-nextjs
