@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import { getDatabase } from "../lib/notion";
-import { Text } from "./[id].js";
+import { Text } from "../components/Text";
 import styles from "./index.module.css";
 import Menu from "../components/menu";
 import { useState } from "react";
