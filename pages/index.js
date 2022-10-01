@@ -28,26 +28,32 @@ export default function Home({ posts }) {
   const setSelectOption = [...set];
   return (
     <>
-       <Seo/>
+       <Seo
+        pageImg="/meta.jpg"
+      />
 
       <main className={styles.container}>
         <header className={styles.header}>
           <Menu />
-          <h1>DenDe's Novel site</h1>
+          <h1>On And On And On N and I</h1>
           <p>
-            のんびり趣味で綴っている私小説サイトです。山梨県でSEをしながらのんびり不定期で更新中。基本的に短編中心で書いています。このサイトはこちらの
+          のんびり趣味で綴っているノベル＆イラスト公開サイトです。山梨県でSEをしながらのんびり不定期で更新中。ノベルは短編中心で書いています。<br/>
+          小説書いている方やイラストを公開している方との交流などを増やしていければと思っております。<br/>
+          コメント機能などは実装されていませんので、交流はTwitterでお願いします。
+          <p>
+            コメント感想などはコチラ→
+            <a href="https://twitter.com/dendeiriamaka1">dende趣味Twitter</a>
+          </p>
+          このサイトの作成はこちらの
             <a href="https://github.com/samuelkraft/notion-blog-nextjs">
               notion-blog-nextjs
             </a>
             を使わせて頂いています。それにしてもNotionで執筆できるのがとても快適です。ありがとうございます。
           </p>
           <p>
-            コメント感想などはコチラ→
-            <a href="https://twitter.com/dendeiriamaka1">dende趣味Twitter</a>
-          </p>
-          <p>
             エンジニアに興味がある人はコチラ→
             <a href="https://twitter.com/dendeiriamaka1">学習記録Twitter</a>
+            <a href="https://tech-blog-efcg.vercel.app/">tech-blog</a>
           </p>
         </header>
         <div className={`${styles.cp_ipselect} ${styles.cp_sl02}`}>

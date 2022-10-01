@@ -8,9 +8,9 @@ const Seo = ({
   pageImgWidth,
   pageImgHeight
 }) => {
-  const defaultTitle = ' On And On And On And On '
+  const defaultTitle = ' On And On '
   const defaultDescription = 
-  'のんびり趣味で綴っている私小説サイトです。山梨県でSEをしながらのんびり不定期で更新中。基本的に短編中心で書いています。 '
+  'のんびり趣味で綴っているノベル＆イラスト公開サイトです。山梨県でSEをしながらのんびり不定期で更新中。ノベルは短編中心で書いています。 '
 
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
   const description = pageDescription ? pageDescription : defaultDescription
