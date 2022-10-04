@@ -138,7 +138,8 @@ export default function Post({ page, blocks }) {
   const router = useRouter();
   const asPath = router.asPath
    useEffect(()=>{Prism.highlightAll();
-                  if(blocks){
+                  if(blocks.type === "paragraph"){
+                    console.log(blocks[0])
                   setMetaDes(metaDescription(blocks))}},[]) 
   if (!page || !blocks) {
     return <div />;
@@ -148,8 +149,8 @@ export default function Post({ page, blocks }) {
       <Seo
         pageTitle={page.properties.Name.title[0].plain_text}
         pageDescription={metaDes?metaDes:page.properties.Name.title[0].plain_text}
-        pagePath={`https://tech-blog-efcg.vercel.app/${asPath}`}
-        pageImg="/24510976_l.jpg"
+        pagePath={`https://notion-blog-nextjs-dende-h.vercel.app/${asPath}`}
+        pageImg="/meta.jpg"
       />
 
       <article className={styles.container}>

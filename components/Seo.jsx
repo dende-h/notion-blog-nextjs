@@ -8,9 +8,9 @@ const Seo = ({
   pageImgWidth,
   pageImgHeight
 }) => {
-  const defaultTitle = '田舎でのんびり書くテックブログ'
+  const defaultTitle = ' On And On '
   const defaultDescription = 
-  '普段の学習記録を公開しているテックブログです。主な学習言語はJavaとJavaScript,TypeScriptです。WordPressようにPHPや、インフラ周りはAWSの学習に取り組もうとしているところです。'
+  'のんびり趣味で綴っているノベル＆イラスト公開サイトです。山梨県でSEをしながらのんびり不定期で更新中。ノベルは短編中心で書いています。 '
 
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
   const description = pageDescription ? pageDescription : defaultDescription
