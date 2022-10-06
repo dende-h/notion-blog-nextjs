@@ -30,7 +30,7 @@ export default function Home({ posts }) {
   return (
     <>
        <Seo
-       pagePath="https://notion-blog-nextjs-dende-h.vercel.app/"
+       pagePath="https://notion-novel-blog-dende.vercel.app/"
         pageImg="/meta.jpg"
       />
 

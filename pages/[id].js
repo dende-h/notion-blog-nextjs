@@ -149,7 +149,7 @@ export default function Post({ page, blocks }) {
       <Seo
         pageTitle={page.properties.Name.title[0].plain_text}
         pageDescription={metaDes?metaDes:page.properties.Name.title[0].plain_text}
-        pagePath={`https://notion-blog-nextjs-dende-h.vercel.app/${asPath}`}
+        pagePath={`https://notion-novel-blog-dende.vercel.app/${asPath}`}
         pageImg="/meta.jpg"
       />
 
