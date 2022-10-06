@@ -39,6 +39,6 @@ export const getStaticProps = async () => {
         text:text,
         posts:fileNames,
       },
-      revalidate: 1,
+      revalidate: 10,
     };
   };
