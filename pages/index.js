@@ -13,7 +13,7 @@ export default function Home({ posts }) {
   const [selectValue, setSelectValue] = useState("All Posts");
   const [allPostFlag,setAllPostFlag] = useState(true);
 
-  // const AllPosts = posts.filter((post) => {return post.properties.Published.checkbox === true})
+  const AllPosts = posts.filter((post) => {return post.properties.Published.checkbox === true})
 
   const changeTag = (e) => {
     setSelectValue(e.target.value)
@@ -23,8 +23,8 @@ export default function Home({ posts }) {
       setAllPostFlag(true)
     }
   }
-  const Tags = posts.map((post) => post.properties.Tags.multi_select[0].name);
-  const selectTagPosts = posts.filter((post)=> {return post.properties.Tags.multi_select[0].name === selectValue})
+  const Tags = AllPosts.map((post) => post.properties.Tags.multi_select[0].name);
+  const selectTagPosts = AllPosts.filter((post)=> {return post.properties.Tags.multi_select[0].name === selectValue})
   const set = new Set(Tags);
   const setSelectOption = [...set];
   return (
@@ -69,7 +69,7 @@ export default function Home({ posts }) {
         </div>
         <h2 className={styles.heading}>{selectValue}</h2>
         <ol className={styles.posts}>
-          {allPostFlag ?(posts.map((post) => {
+          {allPostFlag ?(AllPosts.map((post) => {
             const date = new Date(post.last_edited_time).toLocaleString(
               "en-US",
               {
