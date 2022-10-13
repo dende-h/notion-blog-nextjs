@@ -27,7 +27,7 @@ export default GiftArt
 
 export const getStaticProps = async () => {
    const fs = require("fs");
-   const authorName = fs.readFileSync("./public/images/authorName.txt", "utf-8")
+   const authorName =  fs.readFileSync("./public/images/authorName.txt", "utf-8")
    const authorNames = authorName.toString().split(',')
    const comment = fs.readFileSync("./public/images/comment.txt", "utf-8")
    const comments = comment.toString().split(',')
