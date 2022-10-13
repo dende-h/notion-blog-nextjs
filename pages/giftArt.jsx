@@ -44,6 +44,6 @@ export const getStaticProps = async () => {
         comments:comments,
         posts: fileNames,
       },
-      revalidate: 10,
+      revalidate: 1,
     };
   };
