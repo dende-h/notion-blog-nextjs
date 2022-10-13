@@ -2,7 +2,7 @@ import { memo } from "react";
 import Menu from "../components/menu";
 import ArticleImg from "../components/articleImg";
 import styles from "./illustration.module.css";
-
+import Seo from "../components/Seo";
 
 
 const GiftArt = memo(({comments, posts , urls , authorNames}) =>{

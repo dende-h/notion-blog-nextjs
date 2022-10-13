@@ -2,7 +2,7 @@ import { memo } from "react";
 import Menu from "../components/menu";
 import styles from "./linkPage.module.css";
 import GridItem from "../components/gridItem";
-
+import Seo from "../components/Seo";
 
 const linkPage = memo(({siteUrl, text, posts}) =>{
 
