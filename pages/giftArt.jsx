@@ -11,6 +11,12 @@ const GiftArt = memo(({comments, posts , urls , authorNames}) =>{
 
     return (
         <>
+        <Seo
+        pageTitle="ギフトアートページ"
+        pageDescription="皆様から頂いたイラストや掲載許可を頂いたイラスト置場です。"
+        pagePath={`https://notion-blog-nextjs-nine.vercel.app/giftArt`}
+        pageImg="/meta.jpg"
+        />
         <main className={styles.container}>
         <Menu/>
         <h1>Clip art of a gift</h1>
@@ -44,6 +50,5 @@ export const getStaticProps = async () => {
         comments:comments,
         posts: fileNames,
       },
-      revalidate: 1,
     };
   };

@@ -8,6 +8,12 @@ const linkPage = memo(({siteUrl, text, posts}) =>{
 
     return (
         <>
+        <Seo
+        pageTitle="各リンクページ"
+        pageDescription="フォロワー様のプロフィールやWEBサイト、管理人おすすめのサイトなどへのリンク置場です。"
+        pagePath={`https://notion-blog-nextjs-nine.vercel.app/linkPage`}
+        pageImg="/meta.jpg"
+        />
         <main className={styles.container}>
         <Menu/>
         <h1>Links page</h1>
@@ -39,6 +45,5 @@ export const getStaticProps = async () => {
         text:text,
         posts:fileNames,
       },
-      revalidate: 1,
     };
   };

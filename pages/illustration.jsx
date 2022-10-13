@@ -12,6 +12,12 @@ const illustration = memo(({comments, posts}) =>{
 
     return (
         <>
+        <Seo
+        pageTitle="でんでイラスト置場"
+        pageDescription="管理人の自作イラスト掲載のページです。"
+        pagePath={`https://notion-blog-nextjs-nine.vercel.app/illustration`}
+        pageImg="/meta.jpg"
+        />
         <main className={styles.container}>
           <Menu/>
           <h1>Dende's illustration place</h1>
@@ -37,6 +43,5 @@ export const getStaticProps = async () => {
         comments:comments,
         posts: fileNames,
       },
-      revalidate: 1,
     };
   };

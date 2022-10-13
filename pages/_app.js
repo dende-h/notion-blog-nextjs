@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import usePageView from '../hooks/usePageView'
+import GoogleAnalytics from "../components/GoogleAnalytics";
 
 
 function MyApp({ Component, pageProps }) {
@@ -7,6 +8,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
   <>
+  <GoogleAnalytics/>
   <Component {...pageProps} />;
   </>
 )  
