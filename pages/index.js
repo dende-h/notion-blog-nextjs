@@ -3,7 +3,6 @@ import Link from "next/link";
 import { getDatabase } from "../lib/notion";
 import { Text } from "../components/Text";
 import styles from "./index.module.css";
-import Menu from "../components/menu";
 import { useState } from "react";
 import Seo from "../components/Seo";
 
@@ -36,24 +35,19 @@ export default function Home({ posts }) {
 
       <main className={styles.container}>
         <header className={styles.header}>
-          <Menu />
-          <h1>On and on N and I</h1>
+          <h1>ChatGTPと考える小説創作</h1>
           <p>
-          のんびり趣味で綴っているノベル&イラスト公開サイトです。山梨県でSEをしながらのんびり不定期で更新中。ノベルは短編中心で書いています。<br/>
-          小説書いている方やイラストを公開している方との交流などを増やしていければと思っております。<br/>
-          コメント機能などは実装されていませんので、交流はTwitterでお願いします。<br/>
-          twitter→
-            <a href="https://twitter.com/dendeiriamaka1">dende趣味Twitter</a><br/>
-
-          このサイトの作成はこちらの
-            <a href="https://github.com/samuelkraft/notion-blog-nextjs">
-              notion-blog-nextjs
-            </a>
-            を使わせて頂いています。それにしてもNotionで執筆できるのがとても快適です。ありがとうございます。
+          主に小説執筆のための情報を発信しています<br/>
+          自身でも執筆と公開のためのサービスを開発しました<br/>
+          <a href="https://next-novel-editor.vercel.app/">短編小説執筆用Webアプリ【Re:terature】</a><br/>
+          <a href="https://next-novel-site.vercel.app/"> 短編小説閲覧Webサイト【Lit:Bite】</a>
           </p>
           <p>
-            エンジニアに興味がある人はコチラ→
-            <a href="https://twitter.com/dendeiriamaka1">学習記録Twitter</a>
+          当ブログ紹介記事→
+            <a href="https://notion-blog-nextjs-dende-h.vercel.app/1cbf85d5-edf8-4211-880c-dec597f9483b">当ブログについて</a><br/>
+          管理人twitter→
+            <a href="https://twitter.com/dende49592814">管理人Twitter</a><br/>
+          テックブログはこちら→
             <a href="https://tech-blog-efcg.vercel.app/">tech-blog</a>
           </p>
         </header>
