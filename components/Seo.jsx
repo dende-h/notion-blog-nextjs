@@ -8,9 +8,9 @@ const Seo = ({
   pageImgWidth,
   pageImgHeight
 }) => {
-  const defaultTitle = ' On And On '
+  const defaultTitle = 'ChatGTPと考える創作支援ブログ'
   const defaultDescription = 
-  'のんびり趣味で綴っているノベル&イラスト公開サイトです。山梨県でSEをしながらのんびり不定期で更新中。ノベルは短編中心で書いています。 '
+  '小説の創作をしている方を支援するための情報を発信するブログサイトです'
 
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
   const description = pageDescription ? pageDescription : defaultDescription
