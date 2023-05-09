@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import usePageView from '../hooks/usePageView'
 import GoogleAnalytics from "../components/GoogleAnalytics";
+import { Analytics } from '@vercel/analytics/react';
 
 
 function MyApp({ Component, pageProps }) {
@@ -10,6 +11,7 @@ function MyApp({ Component, pageProps }) {
   <>
   <GoogleAnalytics/>
   <Component {...pageProps} />;
+  <Analytics />
   </>
 )  
 }
