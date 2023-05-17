@@ -46,7 +46,7 @@ export default function Home({ posts }) {
           当ブログ紹介記事→
             <a href="https://notion-blog-nextjs-dende-h.vercel.app/1cbf85d5-edf8-4211-880c-dec597f9483b">当ブログについて</a><br/>
           管理人twitter→
-            <a href="https://twitter.com/dende49592814">管理人Twitter</a><br/>
+            <a href="https://twitter.com/dendeiriamaka1">管理人Twitter</a><br/>
           テックブログはこちら→
             <a href="https://tech-blog-efcg.vercel.app/">tech-blog</a>
           </p>
