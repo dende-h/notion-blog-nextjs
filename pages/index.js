@@ -39,7 +39,7 @@ export default function Home({ posts }) {
           <p>
           主に小説執筆のための情報を発信しています<br/>
           自身でも執筆と公開のためのサービスを開発しました<br/>
-          <a href="https://next-novel-editor.vercel.app/">短編小説執筆用Webアプリ【Re:terature】</a><br/>
+          <a href="https://novel-editor-ver2.vercel.app/">短編小説執筆用Webアプリ【Re:terature】</a><br/>
           <a href="https://next-novel-site.vercel.app/"> 短編小説閲覧Webサイト【Lit:Bite】</a>
           </p>
           <p>
