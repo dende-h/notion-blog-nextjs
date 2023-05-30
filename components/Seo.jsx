@@ -40,6 +40,8 @@ const Seo = ({
       <link rel="canonical" href={url} />
       <link rel="icon" href="/favicon.ico" />
       <meta name="google-site-verification" content="26u2b3-4uum3ZXDKrS6jWfPzCaWa9I8dPyp5TD2ekrE" />
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9778569212499788"
+     crossorigin="anonymous"></script>
     </Head>
   )
 }
