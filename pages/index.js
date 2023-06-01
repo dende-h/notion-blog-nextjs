@@ -35,7 +35,7 @@ export default function Home({ posts }) {
 
       <main className={styles.container}>
         <header className={styles.header}>
-          <h1>ChatGTPと考える小説創作</h1>
+          <h1>小説創作支援研究所</h1>
           <p>
           主に小説執筆のための情報を発信しています<br/>
           自身でも執筆と公開のためのサービスを開発しました<br/>

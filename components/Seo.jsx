@@ -8,7 +8,7 @@ const Seo = ({
   pageImgWidth,
   pageImgHeight
 }) => {
-  const defaultTitle = 'ChatGTPと考える創作支援ブログ'
+  const defaultTitle = '小説創作支援研究所'
   const defaultDescription = 
   '小説の創作をしている方を支援するための情報を発信するブログサイトです'
 
